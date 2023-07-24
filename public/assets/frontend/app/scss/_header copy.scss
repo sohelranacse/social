@@ -1,0 +1,154 @@
+.header {
+    background-color: $primary;
+}
+
+.sc-home {
+    float      : left;
+    width      : 45px;
+    height     : 50px;
+    background : $light-blue;
+    line-height: 50px;
+    text-align : center;
+    color      : $white;
+}
+
+.sc-search {
+    float      : left;
+    width      : 89%;
+    margin-left: 20px;
+
+    input {
+        background-color: $light-blue;
+        height          : 50px;
+        border          : none;
+        color           : $white-light;
+        padding         : 0 20px;
+
+        &::placeholder {
+            color: $white-light;
+        }
+    }
+}
+
+.header-controls {
+    max-width   : 80%;
+    margin-right: 0;
+    margin-left : auto;
+    button {
+        background : $light-blue;
+        border     : none;
+        width      : 40px;
+        height     : 40px;
+        line-height: 40px;
+        color      : $white-light;
+        @include border-radius(50%);
+        text-align: center;
+    }
+    .dropdown-toggle:after {
+        right: 10px;
+        position: relative;
+    }
+    .profile-control {
+        button {
+            width: 60px;
+            @include border-radius(50px);
+            position: relative;
+
+            img {
+                position: relative;
+                left    : -15px;
+                top     : -2px;
+            }
+        }
+
+        i {
+            position: absolute;
+            right   : 10px;
+            top     : 10px;
+        }
+    }
+}
+
+
+/*
+    Timeline Sidebar Navigation
+*/
+.timeline-sidebar {
+ position: relative;
+}
+
+.timeline-navigation {
+    position: absolute;
+    height  : 100%;
+    width   : 350px;
+    left    : 0;
+    padding: 20px 0;
+
+    nav {
+        ul {
+            @include list-clear;
+    
+            li {
+                display: block;
+                a {
+                    font-weight: 600;
+                    display: block;
+                    color: $headings-color;
+                    padding: 15px 15px 15px 115px;
+                    @extend .overly;
+                    &::before {
+                        background: #ECECEC;
+                        @include opacity(0);
+                        @include transition();
+                        @include border-radius(5px);
+                    }
+                    &::after {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 5px;
+                        height: 100%;
+                        content: "";
+                        background-color: $primary;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        @include opacity(0);
+                        @include transition();
+                    }
+                   
+                } 
+                &.active a::before, &:hover a::before,&.active a::after, &:hover a::after  {
+                    @include opacity(1);
+                }
+    
+                img {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}
+
+.footer-nav {
+    padding-left: 115px;
+
+    .footer-menu ul {
+        @include list-clear;
+
+        li {
+            display: inline-block;
+            padding: 0 5px;
+
+            a {
+                color: $brand-mute;
+                @extend .small-text;
+            }
+        }
+    }
+
+    .copy-rights {
+        p {
+            font-size: 14px;
+        }
+    }
+}

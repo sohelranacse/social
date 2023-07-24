@@ -1,0 +1,95 @@
+.eCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  box-shadow: 0 7px 15px #797c8b14;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  &.eCard-2 {
+    border: 1px solid $eColor_Whiteish;
+    border-radius: 5px;
+    .eCard-title {
+      margin-bottom: 0;
+    }
+  }
+  &.eCard-special {
+    .eCard-body {
+      padding: 20px 20px 30px;
+    }
+  }
+}
+.eCard-img-top {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+}
+.eCard-img {
+  width: 100%;
+}
+.eCard-body {
+  flex: 1 1 auto;
+  padding: 10px 20px 20px;
+  .eCard-title {
+    font-size: 15px;
+    font-weight: $fw_SemiBold;
+    line-height: 28px;
+    color: $eColor_Blueish;
+    margin-bottom: 5px;
+  }
+  .eCard-subtitle {
+    font-size: 12px;
+    font-weight: $fw_Regular;
+    line-height: 22px;
+    color: $eColor_Blackish;
+  }
+  .eCard-text {
+    font-size: 13px;
+    font-weight: $fw_Regular;
+    line-height: 22px;
+    color: $eColor_Blackish;
+    margin-bottom: 13px;
+  }
+  .eCard-AdminBtn {
+    gap: 10px;
+  }
+  .eCard-Admin {
+    gap: 5px;
+    .eCard-userImg {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: $eColor_Whiteish;
+    }
+    span {
+      font-size: 12px;
+      font-weight: $fw_Medium;
+      line-height: 22px;
+      color: $eColor_Blackish;
+    }
+  }
+  .eBtn {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: $fw_Medium;
+    line-height: 22px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    width: 86px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: transparent;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+}

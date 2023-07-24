@@ -1,0 +1,156 @@
+a.video-popup {
+    position     : absolute;
+    left         : 50%;
+    top          : 50%;
+    width        : 65px;
+    height       : 65px;
+    line-height  : 65px;
+    border       : 3px solid $white;
+    transform    : translate(-50%, -50%);
+    border-radius: 50%;
+    text-align   : center;
+    color        : $white;
+    font-size    : 18px;
+}
+
+.entry-img {
+    position: relative;
+}
+
+.svideo-entry {
+    .post-controls>a {
+        padding: 0;
+        margin : -8px 7px 0 20px;
+    }
+
+    .avatar {
+        flex: 0 0 45px;
+    }
+
+    .avatar-info h4 {
+        font-size: 16px;
+        @extend .fw-6;
+    }
+}
+
+.featured-video.single-entry {
+    background-color: $white;
+    box-shadow      : none;
+    margin-bottom   : 20px;
+    overflow        : hidden;
+    padding         : 20px 0px 20px 20px;
+
+    video {
+        border-radius: 5px;
+    }
+
+    .entry-inner {
+        padding: 10px 8px;
+    }
+
+    .comment-wrap {
+        max-width: 95%;
+    }
+
+}
+
+.l-video {
+    margin-bottom: 20px;
+
+    .video-thumb {
+        position: relative;
+        flex    : 0 0 100px;
+    }
+
+    span.dutation {
+        position     : absolute;
+        right        : 3px;
+        bottom       : 3px;
+        background   : #090808b3;
+        padding      : 5px 6px;
+        font-size    : 10px;
+        color        : #fff;
+        line-height  : 1;
+        border-radius: 5px;
+    }
+
+    h3 {
+        font-size    : 14px;
+        margin-bottom: 5px;
+    }
+
+    .vpost-meta {
+        line-height: 1;
+    }
+
+    .vpost-status {
+        font-size: 12px;
+    }
+}
+
+.video-cards {
+    .svideo-entry {
+        margin-bottom: 20px;
+    }
+}
+
+.gallery-wrap {
+    display  : flex;
+    flex-wrap: wrap;
+
+    a {
+        width        : 23.5%;
+        overflow     : hidden;
+        margin       : 5px;
+        border-radius: 5px;
+    }
+}
+
+.video-poster {
+    max-width: 400px;
+    margin   : auto;
+    @include border-radius(10px);
+    background-color: $white;
+    padding         : 20px;
+    border          : 1px solid $border-color;
+    margin-bottom: 20px;
+}
+
+.video-meta {
+    position        : absolute;
+    right           : 0;
+    z-index         : 2;
+    top             : 0;
+    padding         : 10px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.411), transparent);
+    height          : 50%;
+
+    .video-avatar {
+        width: 80%;
+        float: left;
+
+        a,
+        .small-text {
+            color: $white;
+        }
+    }
+
+    .video-share {
+        width     : 15%;
+        float     : right;
+        text-align: center;
+
+        a {
+            display      : block;
+            line-height  : 1;
+            text-align   : center;
+            margin-bottom: 16px;
+            color        : $white;
+
+            img {
+                display: block;
+                margin: 0 auto 5px;
+            }
+        }
+    }
+}

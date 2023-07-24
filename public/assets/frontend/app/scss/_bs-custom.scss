@@ -1,0 +1,46 @@
+// #######################################
+//		NO NEED TO CUSTOM THE GRAY COLOR IF YOU DO NOT
+// #######################################
+
+
+$text-muted: #949494;
+$border-color: #DEDEDE;
+$body-bg: #F5F5F5;
+$primary: #5A2FF9;
+$success: #31A24C;
+/* $theme-colors: (
+    "primary" : $theme-color,
+    "secondary": $light-gray,
+    "mute" : $brand-mute,
+); */
+$theme-colors: (
+  "primary": $primary,
+  "secondary": #F3F3F3,
+  "mute" : $brand-mute,
+  "success": $success,
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1280px,
+  xxl: 1320px
+);
+// ##########################################
+//   OPTION 1: 
+// - IMPORT BOOTSTRAP ( The entire bootstrap with everything)
+// ##########################################
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// ##########################################
+//   OPTION 2: 
+// - IMPORT IMPORT ONLY THE PART OF BOOTSTRAP YOU WANT TO USE
+// ##########################################
+
+// @import "../node_modules/bootstrap/scss/functions";
+// @import "../node_modules/bootstrap/scss/variables";
+// @import "../node_modules/bootstrap/scss/mixins";
+
+// Include any optional Bootstrap components as you like
+// @import "../node_modules/bootstrap/scss/root";
+// @import "../node_modules/bootstrap/scss/reboot";

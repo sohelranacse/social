@@ -1,0 +1,405 @@
+.gr-search {
+    h3 {
+        overflow   : hidden;
+        line-height: 1.8;
+
+        span {
+            width           : 32px;
+            height          : 32px;
+            display         : inline-table;
+            text-align      : center;
+            color           : $primary;
+            background-color: #DFD9F6;
+            @include border-radius(50%);
+            margin-right: 10px;
+            float       : left;
+
+            i {
+                display       : table-cell;
+                vertical-align: middle;
+                font-size     : 11px;
+            }
+        }
+    }
+
+    form {
+        position  : relative;
+        margin-top: 20px;
+
+        input.bg-secondary {
+            padding: 10px 10px 10px 40px;
+            color  : $secondary;
+
+            &::placeholder {
+                color: $secondary;
+            }
+        }
+
+        span {
+            position: absolute;
+            left    : 15px;
+            top     : 17px;
+        }
+    }
+}
+
+.page-suggest {
+    .card {
+        text-align   : center;
+        margin-bottom: 15px;
+
+        h4 {
+            font-size    : 14px;
+            margin-bottom: 0px;
+        }
+
+        .btn {
+            margin-top: 15px;
+            padding   : 5px 10px;
+        }
+    }
+}
+
+.group-widget {
+    .widget-title {
+        margin-bottom: 30px;
+    }
+
+    .widget-info {
+        h6 {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.group-widget-cta {
+    padding: 10px;
+
+    i {
+        margin-right: 5px;
+    }
+}
+
+.gw-info li strong {
+    margin-left: 10px;
+}
+
+.group-content {
+    .comment-wrap {
+        max-width: 90%;
+    }
+}
+
+.group-cover {
+    .profile-avatar {
+        h3 {
+            margin-bottom: 15px;
+        }
+    }
+
+    .pc-action {
+        .btn {
+            color  : $secondary;
+            padding: 7px 15px;
+        }
+
+        p {
+            color: $white;
+        }
+    }
+}
+
+.group-carousel {
+    .owl-nav button {
+        top: 30%;
+    }
+
+    .group-item {
+        p {
+            @extend .overly;
+            padding-left: 15px;
+
+            &::before {
+                width : 6px;
+                height: 6px;
+                @include border-radius(50%);
+                background: $brand-mute;
+                top       : 50%;
+                transform : translateY(-50%);
+            }
+        }
+
+        h3 {
+            margin-top: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+        }
+    }
+}
+
+.single-friend {
+    margin-bottom: 20px;
+
+    .avatar {
+        width : 45px;
+        height: 45px;
+
+        img {
+            width : 100%;
+            height: 100%;
+        }
+    }
+
+    h3 {
+        overflow : hidden;
+        font-size: 14px;
+
+        span {
+            display: block;
+            @extend .text-mute;
+            @extend .fw-4;
+            font-size : 14px;
+            margin-top: 5px;
+        }
+    }
+
+    .btn {
+
+        img,
+        i {
+            margin-right: 5px;
+        }
+    }
+}
+
+.create-event {
+    padding: 60px 20px 20px;
+
+    i {
+        font-size: 46px;
+    }
+
+    p {
+        margin: 20px 0 20px;
+    }
+
+}
+
+.single-event {
+    margin-bottom: 30px;
+
+    .event-details {
+        .nav-link {
+            padding   : 0;
+            margin-top: -8px;
+        }
+
+        h4 {
+            margin-top: 5px;
+        }
+
+        span {
+            a {
+                font-weight : 700;
+                color       : $headings-color;
+                padding-left: 5px;
+            }
+        }
+    }
+}
+
+.event-form {
+    margin-top: 20px;
+
+    .form-group {
+        margin-bottom: 20px;
+
+        label {
+            @extend .fw-6;
+            margin-bottom: 5px;
+        }
+    }
+
+    input,
+    textarea {
+        @include border-radius(4px);
+    }
+
+    textarea {
+        border: 1px solid $border-color;
+        height: 120px;
+    }
+}
+
+
+.modal-footer.event-footer {
+    display   : block;
+    text-align: center;
+    border    : none;
+
+    button.btn {
+        display: inline-block;
+        padding: 10px 30px;
+        width  : 185px;
+    }
+}
+
+#createEvent .entry-header {
+    padding: 20px 20px 0;
+}
+
+.card.group-card .tab-pane {
+    ul {
+        margin    : 0;
+        padding   : 0;
+        list-style: none;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            margin : 5px 3px;
+
+            img {
+                @include border-radius(5px);
+            }
+        }
+    }
+
+    .btn {
+        width    : 100%;
+        max-width: 93%;
+        margin   : 30px auto 20px;
+        padding  : 10px;
+        font-size: 20px;
+    }
+}
+
+.g-video ul {
+    margin    : 0;
+    padding   : 0;
+    list-style: none;
+
+    li {
+        position: relative;
+        display: inline-block;
+        margin: 5px 3px;
+        .v-duration {
+            position        : absolute;
+            right           : 5px;
+            bottom          : 5px;
+            background-color: rgba(0, 0, 0, .75);
+            color           : #fff;
+            padding         : 6px 12px;
+            font-size       : 12px;
+            line-height     : 1;
+            @extend .fw-7;
+            @include border-radius(5px);
+        }
+    }
+}
+.pv-video ul li{
+    margin: 3px 1.5px;
+}
+
+#g-album {
+    .card {
+        margin-bottom: 20px;
+        text-align   : center;
+        padding      : 15px;
+
+        a {
+            margin-bottom: 15px;
+            display      : block;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+    }
+}
+
+.invite-friends {
+    padding: 10px;
+    border : 1px solid $border-color;
+    @include border-radius(5px);
+
+    span {
+        display     : inline-block;
+        background  : #F3F3F3;
+        padding     : 5px 20px;
+        color       : $secondary;
+        margin-right: 5px;
+        position    : relative;
+        @include border-radius(5px);
+
+        a {
+            position: absolute;
+            right   : 0;
+            color   : $primary;
+            top     : -10px;
+        }
+    }
+}
+
+.single-suggest {
+    margin-bottom: 15px;
+    padding      : 5px 15px;
+    @include border-radius(5px);
+    @include transition();
+    cursor: pointer;
+
+    &:hover {
+        background-color: $light-gray;
+
+        .btn {
+            background-color: $primary;
+            color           : $white;
+        }
+    }
+}
+
+div#createAlbum {
+    textarea {
+        height: 45px;
+    }
+}
+
+.album-cards {
+    textarea {
+        border       : 1px solid $border-color;
+        margin-top   : 10px;
+        border-radius: 5px;
+    }
+
+    .album-img {
+        position: relative;
+
+        .remove-img {
+            position: absolute;
+            right   : 10px;
+            top     : 10px;
+
+            button {
+                padding    : 3px;
+                line-height: 1;
+
+                &::after {
+                    line-height  : 7px;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+.friends-tab.ct-tab {
+    position: relative;
+    a.btn.btn-primary.right-btn {
+        position: absolute;
+        right: 15px;
+        top: 20px;
+    }
+}

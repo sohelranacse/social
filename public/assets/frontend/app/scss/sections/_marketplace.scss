@@ -1,0 +1,299 @@
+.pr-search {
+    form {
+        margin-top: 0;
+
+        span {
+            top: 13px;
+        }
+    }
+}
+
+.product-filter.mt-3 .form-group {
+    width       : 100%;
+    display     : inline-block;
+    margin-right: 5px;
+
+    div {
+        min-width  : 120px;
+        padding    : 0px 10px;
+        height     : 48px;
+        line-height: 46px;
+    }
+
+    input::placeholder {
+        color: $secondary;
+    }
+}
+
+.product-filter.mt-3 .form-group:last-child {
+    margin: 0;
+}
+
+.product-filter.mt-3 .form-group select {
+    width: 100%;
+}
+
+.product {
+    h3 {
+        margin: 15px 0 5px;
+    }
+
+    .product-figure {
+        margin-bottom: 20px;
+
+        a.message-trigger {
+            position  : absolute;
+            width     : 48px;
+            height    : 48px;
+            background: $primary;
+            display   : table;
+            color     : $white;
+            bottom    : -24px;
+            @include border-radius(5px);
+            left      : 20px;
+            text-align: center;
+
+            i {
+                display       : table-cell;
+                vertical-align: middle;
+            }
+            &.sold-out {
+                background: #DE1F01;
+                line-height: 46px;
+                font-weight: 600;
+            }
+        }
+    }
+    .prodoct-footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid $border-color;
+            text-align: center;
+            line-height: 40px;
+            @include border-radius(5px);
+            &:hover{
+                background-color: $primary;
+                color: $white;
+            }
+            &.btn {
+                border: 1px solid $primary;
+                line-height: 26px;
+                width: 88px;
+            }            
+        }
+    }
+    
+}
+
+.pb-share span {
+    width     : 40px;
+    height    : 40px;
+    background: #E8E9EC;
+    display   : inline-block;
+    margin    : 0 5px;
+    text-align: center;
+    @include border-radius(5px);
+    line-height: 40px;
+
+    a {
+        color  : $headings-color;
+        display: block;
+    }
+}
+
+.pt-publisher {
+    border-top   : 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    padding      : 5px 0;
+}
+
+.pt-details {
+    margin-top: 20px;
+
+    ul {
+        @include list-clear;
+
+        li {
+            display      : block;
+            margin-bottom: 10px;
+            @extend .fw-6;
+
+            span {
+                float: right;
+            }
+        }
+    }
+}
+
+.product-slider {
+    margin-bottom: 70px;
+
+    .carousel-indicators [data-bs-target] {
+        flex            : auto;
+        width           : 64px;
+        background-color: transparent;
+        height          : 50px;
+        text-indent     : 0;
+        border          : 0 none;
+        @include opacity(1);
+
+        img {
+            @include border-radius(5px);
+        }
+    }
+
+    .carousel-indicators {
+        margin: 0 0 -60px;
+
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        bottom         : -50px;
+        z-index        : 3;
+        align-items    : self-end;
+        justify-content: start;
+        width          : 15%;
+        padding        : 0;
+        color          : #fff;
+        text-align     : left;
+        @include opacity(1);
+    }
+
+    .carousel-control-prev {
+        left: -10px;
+    }
+
+    .carousel-control-next {
+        right: -30px;
+    }
+
+    .carousel-control-prev-icon {
+        background-image: url("../images/left-arrow.png");
+    }
+
+    .carousel-control-next-icon {
+        background-image: url("../images/right-arrow.png");
+    }
+}
+
+.chat-box {
+    .modal-content {
+        border: 0 none;
+
+        .name {
+            h4 {
+                color: $white;
+            }
+
+            small {
+                color: #D2D2D2;
+            }
+        }
+    }
+
+    .modal-inner {
+        max-width  : 45%;
+        margin-left: auto;
+
+        .product {
+            margin-left: 30px;
+        }
+
+        .text-quote {
+            background   : #DFD9F6;
+            padding      : 10px 15px;
+            border-radius: 10px 0px 10px 10px;
+            line-height  : 1;
+            margin-top   : 15px;
+        }
+    }
+
+    .chat-actions button {
+        width        : 30px;
+        height       : 30px;
+        background   : #4929C2;
+        border       : 0;
+        border-radius: 50%;
+        display      : inline-table;
+        padding      : 10px;
+        color        : $white;
+        text-align   : center;
+        font-size     : 9px;
+
+        i {
+            display       : table-cell;
+            vertical-align: middle;
+            line-height   : 1;
+        }
+    }
+
+    .mt-action {
+        margin-top: 20px;
+        textarea.form-control {
+            min-height      : calc(2em + 1rem + 2px);
+            height          : auto;
+            background-color: #f3f3f3;
+            border-radius   : 50px;
+            padding         : 10px 20px;
+            @include border-radius(50px);
+
+        }
+        button.send {
+            width: 52px;
+            margin-left: 20px;
+            border-radius: 50%;
+            height: 50px;
+            display: inline-block;
+            border: none;
+        }
+    }
+    .mt-footer a {
+        display: inline-block;
+        margin-right: 10px;
+        margin-top: 10px;
+        padding: 0 6px;
+    }
+    .user-comments textarea {
+        height: 43px;
+    }
+}
+
+.product-form{
+    .nice-select, input {
+        width: 100%;
+        background-color: #F3F3F3;
+        border: 0 none;
+        span.current {
+            color  : $border-color;
+        }
+    }
+    
+    ul.list {
+        width: 100%;
+    }
+    .form-group {
+        margin-bottom: 10px;
+        label {
+            margin-bottom: 5px;
+            @extend .fw-6;
+        }
+        select{
+            color  : $border-color;
+        }
+        textarea{
+            height: 120px;
+        background-color: #F3F3F3;
+        }
+    }
+}
+.market-nav{
+    @extend .profile-nav;
+    ul li a.nav-link{
+        padding: 15px 30px;
+    }
+}

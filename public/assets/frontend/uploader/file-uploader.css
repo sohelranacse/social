@@ -1,0 +1,54 @@
+.file-uploader{
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #e3e3e3;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    min-height: 108px;
+}
+.file-uploader > label > i{
+    font-size: 50px;
+}
+.file-uploader > label{
+    background: #00000003;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    padding-top: 10px;
+    color: #c7c7c7;
+}
+
+.file-uploader > .preview-files > .row > div{
+    position: relative;
+    padding: 0px;
+}
+.file-uploader > .preview-files > .row > div > i{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 30;
+    cursor: pointer;
+    font-size: 12px;
+    color: #e91e63;
+}
+.file-uploader > .preview-files > .row > div > i:hover{
+    color: #b6124a;
+}
+.file-uploader > .preview-files > .row > div > img, .file-uploader > .preview-files > .row > div > video{
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+    margin: 3px;
+}
+.file-uploader > .preview-files > .row > div > small{
+    display: block;
+    height: 100%;
+    background-color: #cacae0;
+    border-radius: 5px;
+    border: 2px solid #e0e0eb;
+    padding: 28% 8px 8px 8px;
+    font-weight: 600;
+}

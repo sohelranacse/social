@@ -1,0 +1,274 @@
+.header {
+    background-color: $primary;
+    .navbar-brand{
+        img{
+            @include mobile{
+                max-width: 85px;
+            }
+        }
+    }
+}
+
+.sc-home {
+    float      : left;
+    width      : 45px;
+    height     : 50px;
+    background : $light-blue;
+    line-height: 50px;
+    text-align : center;
+    color      : $white;
+}
+
+.sc-search {
+    float      : left;
+    width      : 91%;
+    margin-left: 20px;
+    @include notebook{
+    width: 85%;
+    }
+    input {
+        background-color: $light-blue;
+        height          : 50px;
+        border          : none;
+        color           : $white-light;
+        padding         : 0 20px;
+
+        &::placeholder {
+            color: $white-light;
+        }
+    }
+}
+.logo-branding{
+    @include mobile{
+        position: absolute;
+        top: 12px;
+       button {
+            margin-right: 10px;
+            position: relative;
+            top: 4px;
+        }
+    }
+    button {
+        background : $light-blue;
+        border     : none;
+        width      : 40px;
+        height     : 40px;
+        line-height: 40px;
+        color      : $white-light;
+        @include border-radius(50%);
+        text-align: center;
+        @include mobile{
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+        }
+    }
+
+}
+.header-controls {
+    max-width   : 80%;
+    margin-right: 0;
+    margin-left : auto;
+    @include mobile{
+        max-width: 50%;
+    }
+    @include wide_mobile{
+        max-width: 65%;
+    }
+    @include tablet{
+        max-width: 55%;
+    }
+    @include notebook{
+        max-width: 100%;
+    }
+    button {
+        background : $light-blue;
+        border     : none;
+        width      : 40px;
+        height     : 40px;
+        line-height: 40px;
+        color      : $white-light;
+        @include border-radius(50%);
+        text-align: center;
+        @include mobile{
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+        }
+    }
+
+    .dropdown-toggle:after {
+        right   : 10px;
+        position: relative;
+    }
+
+    .profile-control {
+        button {
+            width: 60px;
+            @include border-radius(50px);
+            position: relative;
+
+            img {
+                position: relative;
+                left    : -15px;
+                top     : -2px;
+            }
+        }
+
+        i {
+            position: absolute;
+            right   : 10px;
+            top     : 10px;
+        }
+    }
+}
+
+
+/*
+    Timeline Sidebar Navigation
+*/
+
+    @media (min-width: 992px) {
+        .offcanvas {
+            visibility: visible !important;
+            position        : relative;
+            left            : auto;
+            right           : auto;
+            background-color: transparent;
+            border          : none;
+            transform       : translate(0);
+        }
+    }
+    .offcanvas-start {
+        @include mobile{
+            width: 255px;
+        }
+        @include wide_mobile{
+            width: 355px;
+        }
+    }
+
+.offcanvas-body {
+    overflow: inherit;
+    padding : 0;
+}
+
+.modal-backdrop {
+    @include mobile {
+        z-index: 1030;
+    }
+
+    @include tablet {
+        z-index: 1030;
+    }
+}
+
+.timeline-sidebar {
+    position: relative;
+}
+
+.timeline-navigation {
+    .menu-wrap {
+
+        ul {
+            @include list-clear;
+
+            li {
+                display: block;
+
+                a {
+                    font-weight: 600;
+                    display    : block;
+                    color      : $headings-color;
+                    padding    : 15px 15px 15px 0px;
+                    @extend .overly;
+
+                    &::before {
+                        background: #ECECEC;
+                        @include opacity(0);
+                        @include transition();
+                        @include border-radius(5px);
+                        width: 250%;
+                        left : auto;
+                        right: 0px;
+                    }
+
+                    &::after {
+                        position                  : absolute;
+                        left                      : -112px;
+                        top                       : 0;
+                        width                     : 5px;
+                        height                    : 100%;
+                        content                   : "";
+                        background-color          : $primary;
+                        border-top-right-radius   : 5px;
+                        border-bottom-right-radius: 5px;
+                        @include opacity(0);
+                        @include transition();
+                    }
+
+                    @include mobile {
+                        padding: 15px 20px;
+
+                        &::after {
+                            left: 0;
+                        }
+                    }
+
+                    @include tablet {
+                        padding: 15px 20px;
+
+                        &::after {
+                            left: 0;
+                        }
+                    }
+
+                    @include extra-large {
+                        &::before {
+                            width: 300%;
+
+                        }
+
+                        &::after {
+                            left: -170%;
+                        }
+                    }
+                }
+
+                &.active a::before,
+                &:hover a::before,
+                &.active a::after,
+                &:hover a::after {
+                    @include opacity(1);
+                }
+
+                img {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}
+
+.footer-nav {
+
+    .footer-menu ul {
+        @include list-clear;
+
+        li {
+            display: inline-block;
+            padding: 0 5px;
+
+            a {
+                color: $brand-mute;
+                @extend .small-text;
+            }
+        }
+    }
+
+    .copy-rights {
+        p {
+            font-size: 14px;
+        }
+    }
+}

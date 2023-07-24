@@ -1,0 +1,36 @@
+.post-image-view{
+    background-size: cover;
+    background-position: top center;
+    .post-image-wrap{
+        position: relative;
+        z-index: 1;
+        a.close-trigger{
+            z-index: 2;
+            left: 20px;
+            right: auto;
+            top: 20px;
+            width: 38px;
+            font-size: 15px;
+            height: 38px;
+            color: $white;
+            line-height: 38px;
+            background: rgba(16, 16, 16,  .25);
+          
+        }
+    }
+    .header-controls {
+        background: $primary;
+        padding: 20px 0;
+        max-width: 100%;
+        > div > div {
+            margin: 0 10px;
+        }
+    }
+    .comment-wrap {
+        max-width: 95%;
+        margin-bottom: 0;
+    }
+    .owl-nav button {
+        top: 50%;
+    }
+}

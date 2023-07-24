@@ -1,0 +1,356 @@
+.story-modal {
+    a.story-entry {
+        margin  : 0 7px;
+        position: relative;
+        padding : 18px 0 3px;
+        display : inline-block;
+
+        .ct-story {
+            position   : relative;
+            bottom     : auto;
+            align-items: center;
+            left       : auto;
+            transform  : translateY(0);
+
+            p {
+                color: $secondary;
+            }
+        }
+    }
+
+    .timeline-carousel {
+        .owl-nav button {
+            top        : 52%;
+            width      : 38px;
+            height     : 38px;
+            line-height: 1.75;
+        }
+    }
+}
+
+a.story-entry {
+    margin  : 0 7px;
+    position: relative;
+    figure.avatar-img {
+        height: 160px;
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+    }
+    .ct-story {
+        position   : absolute;
+        bottom     : 20px;
+        align-items: center;
+        left       : 50%;
+        width      : 115px;
+        transform  : translateY(-50%);
+
+        span {
+            width           : 34px;
+            height          : 34px;
+            display         : table;
+            border-radius   : 50%;
+            border          : 2px solid $white;
+            left            : 10px;
+            background-color: $primary;
+            color           : $white;
+            margin-right    : 7px;
+
+            i {
+                display       : table-cell;
+                vertical-align: middle;
+            }
+        }
+
+        p {
+            margin        : 0;
+            color         : $white;
+            text-transform: capitalize;
+            @extend .small-text;
+            @include segeo-semi;
+        }
+    }
+}
+
+.avatar-online {
+    .avatar-img {
+        img {
+            width  : 40px;
+            height : 40px;
+            padding: 1px;
+            border : 2px solid #5A2FF9;
+            @include border-radius(50%);
+        }
+    }
+}
+
+.avatar-info {
+    h4 {
+        font-size    : 13px;
+        margin-bottom: 0;
+        text-overflow: ellipsis;
+        white-space  : nowrap;
+    }
+}
+
+.post-options {
+    .btn {
+        background-color: #F3F3F3;
+    }
+}
+
+.story-gallery {
+    .owl-nav button {
+        position: absolute;
+        left    : 20%;
+        top     : 40%;
+
+        &.owl-next {
+            left : auto;
+            right: 20%;
+        }
+    }
+}
+
+.stc-wrap {
+    max-width: 302px;
+    margin   : 0px auto;
+    position : relative;
+    z-index  : 1
+}
+
+.st-item {
+    position: relative;
+    z-index : 1;
+
+    .st-form {
+        position  : relative;
+        z-index   : 1;
+        text-align: left;
+
+        textarea {
+            height          : 50px;
+            background-color: $light-gray;
+            border          : 0 none;
+            padding         : 10px 20px;
+        }
+
+        img {
+            position: absolute;
+            right   : 20px;
+            top     : 20px;
+            width: auto;
+        }
+    }
+
+    .st-actions {
+        position: absolute;
+        bottom  : 20px;
+        left    : 0;
+        width   : 100%;
+        padding : 0 15px;
+        z-index : 2;
+        img{
+            width: auto;
+        }
+        a h6 {
+            color: $white;
+        }
+    }
+
+    .stc-bg {
+        @extend .overly;
+
+        &::before {
+            top       : auto;
+            bottom    : 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
+            height    : 120px;
+            z-index   : 1;
+        }
+
+        .owl-dots {
+            position: absolute;
+            bottom  : 5px;
+            width   : 100%;
+            margin  : 3px 2px;
+            z-index : 2;
+
+            span {
+                width     : 80px;
+                height    : 3px;
+                background: #9A8C8C;
+
+            }
+            .owl-dot.active{
+                span {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+
+    .story-actions {
+
+        >a {
+            margin-left: 20px;
+        }
+
+        >a {
+            color: $white;
+
+            h6 {
+                color: $white;
+            }
+        }
+
+        .dropdown.dotted {
+            margin-left: 12px;
+
+            .dropdown-toggle:after {
+                color   : $white;
+                top     : -3px;
+                position: relative;
+            }
+        }
+
+        a.dropdown-item {
+            img {
+                display: inline;
+            }
+        }
+    }
+
+    ul.react-list {
+        position  : relative;
+        visibility: visible;
+        opacity   : 1;
+        max-width : 255px;
+        z-index   : 2;
+        text-align: center;
+        top       : auto;
+        margin    : 20px auto;
+
+        li {
+            opacity       : 1;
+            vertical-align: middle;
+        }
+    }
+
+}
+
+div#create-story h5 i {
+    color: $primary;
+}
+
+.story-options a {
+    display    : block;
+    background : $light-gray;
+    text-align : center;
+    font-size  : 16px;
+    font-weight: 600;
+    color      : #101010;
+    width      : 100%;
+    padding    : 95px 20px;
+
+    img {
+        display  : block;
+        max-width: 70px;
+        margin   : 0 auto 20px;
+    }
+    @include mobile{
+        margin-bottom: 30px;
+    }
+    @include tablet{
+        margin-bottom: 30px;
+    }
+}
+
+section.create-story-sec {
+    max-width: 60%;
+    margin   : 50px auto;
+    padding: 5px 20px 20px;
+    background-color: $white;
+    @include mobile {
+        max-width: 95%;
+    }
+}
+
+.modal-title {
+    i {
+        color: $primary;
+    }
+}
+
+.color-plate a {
+    width        : 20px;
+    height       : 20px;
+    display      : inline-block;
+    background   : red;
+    border-radius: 50%;
+    margin-right : 5px;
+
+    &:nth-child(2) {
+        background-color: $primary;
+    }
+
+    &:nth-child(3) {
+        background-color: #FF7856;
+    }
+
+    &:nth-child(4) {
+        background-color: #F92FD7;
+    }
+
+    &:nth-child(5) {
+        background-color: #2F94F9;
+    }
+
+    &:nth-child(6) {
+        background-color: #2FF9BB;
+    }
+
+    &:nth-child(6) {
+        background-color: #F9CA2F;
+    }
+
+    &:nth-child(6) {
+        background-color: $black;
+    }
+}
+
+.text-form {
+    position: relative;
+    z-index : 1;
+
+    img.text-imogi {
+        position: absolute;
+        right   : 20px;
+        top     : 30px;
+    }
+
+    .input-prev {
+        width           : 100%;
+        display         : table;
+        padding         : 130px 0;
+        background-color: $light-gray;
+        margin-top      : 20px;
+        text-align      : center;
+        font-size       : 18px;
+        font-weight     : 600;
+        @include border-radius(10px);
+        img {
+            display       : table-cell;
+            vertical-align: middle;
+            margin        : 0 auto 20px;
+        }
+    }
+}
+
+.story-buttons {
+    a.btn {
+        width    : 100%;
+        padding  : 15px 20px;
+        font-size: 14px;
+    }
+}

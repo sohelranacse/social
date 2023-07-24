@@ -1,0 +1,217 @@
+.event-head{
+    .inline-btn {
+        label{
+            @include mobile{
+                display: none;
+            }
+        }
+        a{
+            @include mobile{
+                width: auto;
+            }
+        }
+    }
+    span {
+        line-height: 28px;
+    }
+}
+.event-card {
+    margin-bottom: 20px;
+    .event-img {
+        height: 190px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        @include border-radius(5px);
+    }
+    .event-text {
+        margin-top: 25px;
+
+        h3 {
+            font-size: 15px;
+
+            a {
+                color: $headings-color;
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+
+        h6 {
+            line-height: 1;
+
+            a {
+                color: $headings-color;
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+
+        .btn {
+            font-size: 14px;
+        }
+    }
+}
+.event-image {
+    position: relative;
+    .event-date {
+        position  : absolute;
+        bottom    : -20px;
+        left      : 10px;
+        background: #fff;
+        padding   : 10px 15px;
+        font-size : 20px;
+        @include border-radius(5px);
+        @extend .fw-7;
+        z-index   : 2;
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, .1);
+
+        &::before {
+            position        : absolute;
+            left            : 0;
+            top             : 0;
+            content         : "";
+            background-color: #de1f01;
+            height          : 10px;
+            width           : 100%;
+        }
+
+        span {
+            margin-top: 5px;
+        }
+    }
+}
+.details-meta span {
+    display: block;
+    i{
+        margin-right: 5px;
+    }
+}
+.dsc-card p{
+    margin:  0;
+    span.count {
+        background: #DFD9F6;
+        width: 50px;
+        padding: 2px;
+        display: inline-block;
+        text-align: center;
+        margin-right: 10px;
+        color: $primary;
+        @include border-radius(5px);
+        @extend .fw-7;
+    }
+}
+.post-react ul,.post-comment ul{
+   list-style: none;
+    margin: 0;
+    li{
+        display: inline-block;
+        span{
+            margin-right: 5px;
+        }
+    }
+}
+.entry-meta  {
+    display: inline-block;
+    .post-comment li {
+        margin-left: 10px;
+    }
+    span.react-count {
+        font-size: 13px;
+        color: #636363;
+        margin-left: 10px;
+        font-weight: 600;
+        position: relative;
+        top: 2px;
+    }
+}
+.discuss-wrap{
+    .react-list {
+        top: -45px;
+    }
+    .entry-react a i{
+        margin-right: 5px;
+    }
+}
+.event-cover .event-date {
+    bottom: 15px;
+    left: 20px;
+}
+.details-meta {
+    margin: 15px 0;
+    span i {
+        color: $brand-mute;
+        margin-right: 10px;
+    }
+}
+.single-event-wrap {
+    ol{
+        padding-left: 15px;
+    }
+    ul.site-share {
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        margin: 0;
+    }
+    
+    ul.site-share li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+}
+
+.going {
+    text-align: center;
+    @extend .fw-6;
+    color: $headings-color;
+    span {
+        display: block;
+        width: 48px;
+        margin: 0 auto;
+        background: #DFD9F6;
+        color: $primary;
+    }
+}
+.s-invite {
+    padding: 10px 0;
+    @include transition();
+    &:hover{
+        .btn-secondary{
+            background-color: $primary;
+            color: $white;
+        }
+    }
+    h3{
+        margin-left: 10px;
+    }
+}
+.popular-event {
+    margin-bottom: 30px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    .ava-img {
+        width: 60px;
+    }
+}
+.event-form{
+    .form-group{
+        margin-bottom: 20px;
+        label{
+            @extend .fw-6;
+        }
+        input,textarea{
+            background-color: $light-gray;
+            border: 0 none;
+        }
+        textarea{
+            height: 200px;
+        }
+    }
+    .post-inner {
+        padding: 90px 0;
+    }
+}
